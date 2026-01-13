@@ -1,1 +1,119 @@
-MAIN assigment code  regression Analysis
+Online Shopping Purchase Prediction
+Overview
+
+This project predicts whether a visitor on an online shopping website will make a purchase during a browsing session. The prediction is based on user behavior such as how many pages they visit, how much time they spend on the website, and whether they are a returning customer.
+
+This project was created as part of an Artificial Intelligence assignment, based on the CS50 AI – Shopping problem.
+
+The focus of this project is not just building a model, but also understanding how well it performs using meaningful evaluation metrics.
+
+What This Project Does
+
+Analyzes user activity from an online shopping dataset
+
+Trains a machine learning model to predict purchase intent
+
+Evaluates results using sensitivity and specificity
+
+Prints clear and understandable results in the terminal
+
+Dataset
+
+File: shopping.csv
+
+Around 12,000 user sessions
+
+Each row represents a single visit to the website
+
+Features include:
+
+Number of pages visited (administrative, informational, product-related)
+
+Time spent on different pages
+
+Bounce rate and exit rate
+
+Month of visit
+
+Browser, region, and operating system
+
+Visitor type (new or returning)
+
+Weekend or weekday visit
+
+Target Column
+
+Revenue
+
+TRUE → Purchase made
+
+FALSE → No purchase
+
+The dataset is used as provided and is not altered.
+
+Machine Learning Model
+
+Algorithm: K-Nearest Neighbors (KNN)
+
+k value: 1
+
+Library: scikit-learn
+
+Why KNN?
+
+KNN with k = 1 was chosen because it is simple, easy to understand, and follows the assignment requirements. The model predicts outcomes by comparing each session with the most similar past session.
+
+How the Program Works
+
+The dataset file is passed through the command line
+
+Data is loaded and converted into numerical form
+
+The dataset is split into:
+
+60% training data
+
+40% testing data
+
+A KNN classifier is trained using the training data
+
+Predictions are made on the test data
+
+Sensitivity and specificity are calculated manually
+
+Results are displayed in the terminal
+
+How to Run
+Requirements
+
+Python 3.10 or higher
+
+scikit-learn
+
+Install dependencies if needed:
+
+pip install scikit-learn
+
+
+Run the project:
+
+python shopping.py shopping.csv
+
+Sample Output
+Correct: 4112
+Incorrect: 820
+Sensitivity (True Positive Rate): 38.77%
+Specificity (True Negative Rate): 91.57%
+
+Notes:
+
+High specificity shows the model is very good at identifying non-purchasing users
+
+Lower sensitivity reflects the challenge of predicting purchases in imbalanced datasets
+
+The project follows the original problem constraints strictly
+
+Final Thoughts
+
+This project is a simple but practical example of using machine learning to analyze user behavior. It highlights both the strengths and limitations of basic models when applied to real-world data.
+
